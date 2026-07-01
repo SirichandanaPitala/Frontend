@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+    <form action="">
+        <div class="form-title">
+            <h2>Create your account</h2>
+            <h3>Join us now</h3>
+        </div>
+        <div class="form-field">
+            <label for="">Full Name</label>
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Enter your full name" name="fullname" required>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="">Email Address</label>
+            <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" name="email" required/>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="">Password</label>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Create a password" name="password" required />
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="">Confirm Password</label>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Confirm your password" name="confirm-password" required />
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+        <div class="form-radio">
+            <label for="">Gender</label>
+
+            <input type="radio" name="gender" id="gmale" />
+            <label for="gmale">Male</label>
+
+            <input type="radio" name="gender" id="gfemale" />
+            <label for="gfemale">Female</label>
+
+            <input type="radio" name="gender" id="gother" />
+            <label for="gother">Other</label>
+
+        </div>
+        <div class="form-field">
+            <label for="">Date of Birth</label>
+            <div class="input-field">
+                <input type="date" placeholder="Select your date of birth" name="dob" required />
+            </div>
+        </div>
+        <div class="form-field">
+            <label for="">Country</label>
+            <div class="drop-down">
+                <i class="fa-solid fa-globe"></i>
+                <select name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-checkbox">
+            <input type="checkbox" name="terms" id="terms" required />
+            <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+        </div>
+        <div class="form-btn">
+            <button>Register Now</button>
+        </div>
+        <div class="form-footer">
+            <spam>Already have an account? </spam>
+            <a href="">Login</a>
+        </div>
+    </form>
 </body>
+
 </html>
