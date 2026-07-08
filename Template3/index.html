@@ -10,7 +10,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            margin: 0px
+            margin: 0px;
+            font-family: sans-serif;
         }
 
         nav {
@@ -18,23 +19,307 @@
             color: white;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            padding: 20px 5%;
+            position: sticky;
+            top: 0px;
         }
 
         .role {
             display: flex;
             align-items: center;
             line-height: 0.4;
+
+        }
+
+        .nav-links {
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+
         }
 
         .role img {
-            width: 4%;
-            height: 4%;
+            width: 10%;
+            height: 10%;
+            margin-right: 10px;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.867);
+            padding: 4% 30px;
+            color: white;
+        }
+
+        .about {
+            line-height: 0.4;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+        }
+
+        .about-description {
+            font-size: 2rem;
+        }
+
+        .about-hooby {
+            font-size: 1.2rem;
+            color: gray;
+            margin-bottom: 10%;
+        }
+
+        .project-link,
+        .download-cv-link {
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 15px;
+        }
+
+        .download-cv-link {
+            background-color: inherit !important;
+            border: 1px solid white;
+            margin-left: 10px;
+        }
+
+        .project-container {
+            background-color: rgba(0, 0, 0, 0.867);
+            color: white;
+            padding: 10px;
+        }
+
+        .project-container h1 {
+            text-align: center;
+        }
+
+        .cards-group {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            width: 30%;
+            border: 1px solid rgba(128, 128, 128, 0.411);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card p {
+            color: rgba(182, 179, 179, 0.721);
+        }
+
+        .card button {
+            background-color: inherit;
+            padding: 20px;
+            width: 30%;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        .card button>a {
+            color: rgb(38, 177, 38);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .services {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .services h1 {
+            color: white;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            width: 200px;
+            background-color: #222;
+            border: 1px solid #333;
+            padding-top: 25px;
+            padding-right: 15px;
+            padding-bottom: 25px;
+            padding-left: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            border-color: #39ff14;
+            transform: translateY(-5px);
+        }
+
+        .service-box i {
+            color: #39ff14;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .service-box h2 {
+            color: white;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            color: #bdbdbd;
+            font-size: 13px;
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .education-container {
+            background-color: black;
+            color: white;
+            padding: 20px 5%;
+            text-align: center;
+        }
+
+        .education-container table {
+            width: 100%;
+        }
+
+        .table-head {
+            background-color: green;
+        }
+
+        .education-container table,
+        .education-container th,
+        .education-container td,
+        .education-container tr {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.222);
+            border-collapse: collapse;
+        }
+
+        .achievements-contact-container {
+            background-color: rgba(0, 0, 0, 0.867);
+            color: rgba(255, 255, 255, 0.407);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .achievements-contact-container div {
+            width: 50%;
+
+        }
+
+        .achievements-contact-container i {
+            color: green;
+        }
+
+        .achievements-contact-container ul,
+        .achievements-contact-container h1 {
+            margin: 0px;
+        }
+
+        .achievements-container li,
+        .contact-container p {
+            font-size: 1.2rem;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        .achievements-container {
+            line-height: 2;
+        }
+
+        .contact-container a {
+            line-height: 1.2;
+            color:rgba(255, 255, 255, 0.407);
+        }
+        .declaration-container{
+            background-color: black;
+            color: white;
+            padding: 20px 5%;
+            line-height: 1.5;
+           
+        }
+        .content-block{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           border: 1px solid rgba(212, 210, 210, 0.222);
+           padding: 20px;
+           border-radius: 8px;
+        }
+        .name-line{
+           position: relative;
+           text-align: center;
+        }
+        .name-line::after{
+            content: "";
+            position: absolute;
+            bottom: 25px;
+            left: 10px;
+            width: 90px;
+            height: 2px;
+            background-color: rgb(14, 228, 32);
+        }
+        @media(max-width: 430px) {
+            nav{
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                
+            }
+            .about-container {
+                flex-direction: column;
+                line-height: 3;
+            }
+            .about-title {
+                font-size: 1.2rem;
+            }
+
+            .cards-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .achievements-contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .achievements-contact-container div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -42,51 +327,125 @@
 <body>
     <nav>
         <div class="role">
-            <img src="https://www.placements.codegnan.com/logo.png" alt="logo" width="10%" />
+            <img src="https://www.placements.codegnan.com/logo.png" alt="logo" />
             <div>
-            <h1>Siri Chandana</h1>
-            <p>Frontend Developer | Student</p>
+                <h1>Siri Chandana</h1>
+                <p>Frontend Developer | Student</p>
             </div>
         </div>
-        <div class="nav=link">
+        <div class="nav-links">
             <!-- <a href="http://www.google.com" target="_self/blank">Google</a>| -->
-            <a href="">About Me</a>|
-            <a href="">Achievements</a>|
-            <a href="">Education</a>|
-            <a href="">Projects</a>|
-            <a href="">Contacts</a>|
+            <a href="">About Me</a>
+            <a href="">Achievements</a>
+            <a href="">Education</a>
+            <a href="">Projects</a>
+            <a href="">Contacts</a>
         </div>
     </nav>
     <div class="about-container">
         <div class="about">
-            <h1>About Me</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aliquam animi aperiam, repudiandae,
-                possimus minima architecto inventore porro velit dicta eum consequatur sint blanditiis similique
-                reprehenderit magnam quod, eaque excepturi?</p>
+            <h1 class="about-title">Hi, I'm <spam style="color:green">Siri Chandana</spam>
+            </h1>
+            <p class="about-description">I build simple and clean websites</p>
+            <p class="about-hooby">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /><br /> Libero aliquam
+                animi aperiam, repudiandae,
+                possimus minima architecto <br /><br />inventore porro velit dicta eum consequatur sint blanditiis
+                similique
+                <br /><br />reprehenderit magnam quod, eaque excepturi?
+            </p>
+            <div>
+                <a href="" class="project-link">View Projects</a>
+                <a href="" class="download-cv-link">Download CV</a>
+            </div>
+
         </div>
         <img src="./user.jpg" alt="user-image" width="20%" />
 
     </div>
-    <div class="achievements-container">
-        <h1>Achievements</h1>
-        <ul> <!--type= desc,square,circle,none-->
-            <li>html</li>
-            <li>small project</li>
-            <li>problem solving</li>
-            <li>consistency</li>
-        </ul>
+
+
+    <div class="services">
+
+        <h1>What I Do</h1>
+
+        <div class="service-container">
+
+            <div class="service-box">
+                <i class="fas fa-desktop"></i>
+                <h2>Web Design</h2>
+                <p>Designing modern and responsive websites with attractive layouts.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-code"></i>
+                <h2>Development</h2>
+                <p>Building fast and responsive websites using HTML, CSS and JavaScript.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-palette"></i>
+                <h2>UI/UX Design</h2>
+                <p>Creating beautiful and user-friendly interfaces for better experience.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-chart-line"></i>
+                <h2>SEO & Analytics</h2>
+                <p>Improving website ranking and performance through SEO.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-rocket"></i>
+                <h2>Performance</h2>
+                <p>Optimizing websites for speed and smooth user experience.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-headset"></i>
+                <h2>Support</h2>
+                <p>Providing maintenance and technical support whenever needed.</p>
+            </div>
+
+        </div>
     </div>
-    <!-- ordered list type=1,a,I,A,i -->
-    <!-- <ol>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-        <li>four</li>
-     </ol> -->
+
+    </div>
+    <div class="project-container">
+        <h1> My Projects</h1>
+        <div class="cards-group">
+            <div class="card">
+                <img src="https://img.magnific.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="" />
+                <h2>1.Project Name</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
+                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
+                    atque odit.</p>
+                <button><a href="">View Project</a></button>
+            </div>
+            <div class="card">
+                <img src="https://img.magnific.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="" />
+                <h2>2.Registration Form</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
+                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
+                    atque odit.</p>
+                <button><a href="">View Project</a></button>
+            </div>
+            <div class="card">
+                <img src="https://img.magnific.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="" />
+                <h2>3.Simple Calculator</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
+                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
+                    atque odit.</p>
+                <button><a href="">View Project</a></button>
+            </div>
+        </div>
+    </div>
     <div class="education-container">
         <h1>Education</h1>
-        <table border="1px">
-            <tr>
+        <table>
+            <tr class="table-head">
                 <th>Qualification</th>
                 <th>Institution</th>
                 <th>Year</th>
@@ -106,67 +465,62 @@
             </tr>
             <tr>
                 <td>School</td>
-                <td>st.Johns</td>
+                <td>St.Johns</td>
                 <td>2020</td>
                 <td>Vijayawada</td>
             </tr>
         </table>
     </div>
-    <div class="projects-container">
-        <h1>Projects</h1>
-        <div class="cards">
-            <div class="card">
-                <h2>1.Project Name</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
-                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
-                    atque odit.</p>
-                <a href="">View Project</a>
-            </div>
-            <div class="card">
-                <h2>2.Registration Form</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
-                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
-                    atque odit.</p>
-                <a href="">View Project</a>
-            </div>
-            <div class="card">
-                <h2>3.Simple Calculator</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam iusto, ratione voluptate asperiores
-                    itaque hic et. Hic distinctio numquam esse ullam provident tempora rerum eum quas maxime. Deleniti,
-                    atque odit.</p>
-                <a href="">View Project</a>
-            </div>
+    <div class="achievements-contact-container">
+        <div class="achievements-container">
+            <h1 style="color:white;">Achievements</h1>
+            <ul> <!--type= desc,square,circle,none-->
+                <li><i class="fa-solid fa-circle-check"></i>Completed java fullstack course</li>
+                <li><i class="fa-solid fa-circle-check"></i>Completed Btech </li>
+                <li><i class="fa-solid fa-circle-check"></i>Participated in coding competitions</li>
+                <li><i class="fa-solid fa-circle-check"></i>Completed HTML/CSS course</li>
+            </ul>
+        </div>
+        <!-- ordered list type=1,a,I,A,i -->
+        <!-- <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+     </ol> -->
+
+        <div class="contact-container">
+            <h1 style="color:white;">Contacts</h1>
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                Email:
+                <a href="">psiric497@gmail.com</a>
+            </p>
+            <p>
+                <i class="fa-brands fa-github"></i>
+                GitHub:
+                <a href="">https://github.com/SirichandanaPitala</a>
+            </p>
+            <p>
+                <i class="fa-solid fa-globe"></i>
+                Website:
+                <a href="">http://www.google.com</a>
+            </p>
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Location: Vijayawada,Andhra Pradesh
+            </p>
         </div>
     </div>
-    <div class="contact-container">
-        <h1>Contacts</h1>
-        <p>
-            <i class="fa-solid fa-envelope"></i>
-            Email:
-            <a href="">psiric497@gmail.com</a>
-        </p>
-        <p>
-            <i class="fa-brands fa-github"></i>
-            GitHub:
-            <a href="">https://github.com/SirichandanaPitala</a>
-        </p>
-        <p>
-            <i class="fa-solid fa-globe"></i>
-            Website:
-            <a href="">http://www.google.com</a>
-        </p>
-        <p>
-            <i class="fa-solid fa-location-dot"></i>
-            Location: Vijayawada,Andhra Pradesh
-        </p>
-    </div>
-    <div class="declaration-container">
+    <footer class="declaration-container">
         <h1>Declaration</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ex architecto unde blanditiis? Excepturi
-            provident exercitationem, iusto dolorem, facere sed voluptas nemo deserunt beatae qui dolore velit animi?
+       <div class="content-block">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Dolor ex architecto unde blanditiis? Excepturi
+            provident exercitationem, <br /> dolorem, facere sed voluptas nemo deserunt beatae qui dolore velit animi?
             Porro, tempora!</p>
-        <p>- P Siri Chandana</p>
-    </div>
+        <p class="name-line">P Siri Chandana</p>
+       </div>
+    </footer>
 
 </body>
 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Building</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/131/774/322/background-pictures-nature-hd-images-1920x1200-wallpaper-preview.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .form-container {
+            background: #22ac50;
+            background: -webkit-linear-gradient(to right, #0b9a80, #05eaa5);
+            background: linear-gradient(to right, #1ea780, #09dccb);
+            width: 30%;
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px 20px;
+        }
+
+        .form-title {
+            text-align: center;
+            line-height: 0.6;
+            color: white;
+        }
+
+        .form-field ,.form-checkbox {
+            margin: 20px 0px;
+            line-height: 2;
+        }
+
+        .input-field ,.drop-down {
+            display: flex;
+            border-radius: 5px;
+            padding: 10px 15px;
+            border: 1px solid white;
+            background-color: white;
+        }
+
+        .input-field input ,.drop-down select {
+            flex: 1;
+            border: none;
+            outline: none;
+
+        }
+
+        .form-btn,
+        .form-fotter {
+            text-align: center;
+        }
+
+        .form-container label {
+            color: white;
+        }
+        .form-checkbox span{
+            color:blue;
+        }
+        .form-btn{
+            background-color: white;
+            border-radius: 25px;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        .form-btn button{
+            background-color: inherit;
+            border: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color:black;
+        }
+        .form-fotter{
+            color: white;
+            line-height: 0.5;
+            text-align: center;
+            margin:15px 0px
+        }
+        .form-fotter a{
+            color: blue;
+            text-decoration: none;
+        }
+
+        
+        
+
+    </style>
+
+</head>
+
+<body>
+
+    <form class=" form-container" action="">
+        <div class="form-title">
+            <h2>Create your Account</h2>
+            <h3>Join us now </h3>
+        </div>
+        <div class="form-field">
+            <label for="">Full Name</label>
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder=" Enter Full Name" name="fullname" required />
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="">Email Address</label>
+            <div class="input-field">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder=" Enter your Email" name="email" required />
+            </div>
+
+        </div>
+
+        <div class="form-field">
+            <label for="">Password</label>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder=" Create a Password" name="password" required />
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+
+
+        <div class="form-field">
+            <label for="">Confirm Password</label>
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder=" Confirm your Password" name="confirmpassword" />
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </div>
+
+        <div class="form-radio">
+            <label for="">Gender</label>
+            <div class="radio-options">
+                <input type="radio" id="gmale" name="gender">
+                <label for="gmale">Male</label>
+
+                <input type="radio" id="gfemale" name="gender">
+                <label for="gfemale">Female</label>
+
+                <input type="radio" id="gother" name="gender">
+                <label for="gother">Other</label>
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="">Date of Birth</label>
+            <div class="input-field">
+                <input type="date" placeholder=" Select your Date of Birth" name="dob" required />
+            </div>
+        </div>
+
+        <div class="form-field">
+            <label for="">Country</label>
+            <div class="drop-down">
+                <i class="fa-solid fa-globe"></i>
+                <select name="country">
+                    <option value="select">Select your Country</option>
+                    <option value="india">India</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-checkbox">
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I agree to the <span>Terms of Service</span> and <span>Privacy Policy</span></label>
+        </div>
+
+        <div class="form-btn">
+            <button> Register Now</button>
+        </div>
+        <div class="form-fotter">
+            <span>Already have an account? </span>
+            <a href="#">Login</a>
+        </div>
+    </form>
+
+</body>
+
+</html>
